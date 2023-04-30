@@ -31,35 +31,47 @@
     <h3> Looking to move forward in the world of web design </h3>
     </div>
 
+    
     <div class="container">
-        <form action="action_page.php">
-      
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="First Name">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Last Name">
-      
-          <label for="Company">Company</label>
-          <input type="text" select id="company" name="Company" placeholder="Enter company name">
-          </select>
-      
-          <label for="submition">Reason for submitting</label>
-          <textarea id="submition" name="submition" placeholder="Enter here" style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-      
-        </form>
-      </div>
+      <form action="action_page.php" id="myForm">
+    
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="First Name">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Last Name">
+    
+        <label for="Company">Email Adress</label>
+        <input type="email" select id="email" name="email" placeholder="Enter your email adress">
+        </select>
+
+        <input type="submit" value="Submit">
+      </form>
+
+      <script>
+        const form = document.getElementById("myForm");
+        form.addEventListener("submit", function(event) {
+          event.preventDefault(); 
+          const firstName = document.getElementById("fname").value;
+          const lastName = document.getElementById("lname").value;
+          const email = document.getElementById("email").value;
+          console.log(firstName, lastName, email);
+
+
+          document.getElementById("fname").value = "";
+          document.getElementById("lname").value = "";
+          document.getElementById("email").value = "";
+        });
+      </script>
+    </div>
 
 </body>
 
 <footer>
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-twitter"></a>
-    <a href="#" class="fa fa-google"></a>
-    <a href="#" class="fa fa-linkedin"></a>
-    <a href="#" class="fa fa-youtube"></a>
-    <a href="#" class="fa fa-instagram"></a>
+  <a href="https://www.facebook.com/matt.davies.5437/" class="fa fa-facebook"></a>
+  <a href="https://twitter.com/MatthewDaviesLD" class="fa fa-twitter"></a>
+  <a href="https://www.linkedin.com/in/matthew-davies-044a8917b/" class="fa fa-linkedin"></a>
+  <a href="https://www.youtube.com/channel/UC6CoMh4L1wpvt4DGalDFK2w" class="fa fa-youtube"></a>
+  <a href="https://www.instagram.com/lululifeof/" class="fa fa-instagram"></a>
 </footer>
 </html>
